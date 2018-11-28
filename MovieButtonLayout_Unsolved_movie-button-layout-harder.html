@@ -45,10 +45,11 @@
       function renderButton(title) {
         let button = $("<button>");
           button.text(title);
-          button.attr("data-movie-title", title);
+          button.addClass("movie");
+          button.attr("data-title", title);
           $("#movies-view").append(button);
       }
-      
+
       // This function handles events where one button is clicked
       $("#add-movie").on("click", function() {
         event.preventDefault();
@@ -58,6 +59,8 @@
 
       // Calling the renderButtons function to display the initial list of movies
       renderButtons();
+
+
     </script>
   </div>
 </body>
