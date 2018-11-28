@@ -53,7 +53,9 @@
       // This function handles events where one button is clicked
       $("#add-movie").on("click", function() {
         event.preventDefault();
-        renderButton($("#movie-input").val());
+        var title = $("#movie-input").val().trim();
+        movies.push(title);
+        renderButton(title);
       });
       
 
